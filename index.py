@@ -45,22 +45,25 @@ root.title("Calculadora")
 operation_var = tk.StringVar(value='+')
 result_var = tk.StringVar()
 
+# Estilo
+root.configure(padx=40, pady=40, bg="black")
+
 # Layout
-tk.Label(root, text="Primeiro número:").grid(row=0, column=0)
-entry1 = tk.Entry(root)
-entry1.grid(row=0, column=1)
+tk.Label(root, text="Primeiro número:", bg="black", fg="white").grid(row=0, column=0, pady=5)
+entry1 = tk.Entry(root, width=15)
+entry1.grid(row=0, column=1, pady=5)
 
-tk.Label(root, text="Segundo número:").grid(row=1, column=0)
-entry2 = tk.Entry(root)
-entry2.grid(row=1, column=1)
+tk.Label(root, text="Segundo número:", bg="black", fg="white").grid(row=1, column=0, pady=5)
+entry2 = tk.Entry(root, width=15)
+entry2.grid(row=1, column=1, pady=5)
 
-tk.Label(root, text="Operação:").grid(row=2, column=0)
-tk.OptionMenu(root, operation_var, '+', '-', '*', '/').grid(row=2, column=1)
+tk.Label(root, text="Operação:", bg="black", fg="white").grid(row=2, column=0, pady=5)
+tk.OptionMenu(root, operation_var, '+', '-', '*', '/').grid(row=2, column=1, pady=5)
 
-tk.Button(root, text="Calcular", command=calculate).grid(row=3, column=0, columnspan=2)
+tk.Button(root, text="Calcular", command=calculate, bg="red", fg="white").grid(row=3, column=0, columnspan=2, pady=10)
 
-tk.Label(root, text="Resultado:").grid(row=4, column=0)
-tk.Entry(root, textvariable=result_var, state='readonly').grid(row=4, column=1)
+tk.Label(root, text="Resultado:", bg="#24f222").grid(row=4, column=0, pady=5)
+tk.Entry(root, textvariable=result_var, state='readonly', width=20).grid(row=4, column=1, pady=5)
 
 # Iniciar a aplicação
 root.mainloop()
