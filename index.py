@@ -39,7 +39,7 @@ def calculate():
 
 # Criar a janela principal
 root = tk.Tk()
-root.title("Calculadora")
+root.title("Calculator")
 
 # Variáveis
 operation_var = tk.StringVar(value='+')
